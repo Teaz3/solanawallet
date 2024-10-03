@@ -1,9 +1,9 @@
 {
   "name": "wallet-backend",
   "version": "1.0.0",
-  "main": "server.js",  // Ensure this points to your main server file (likely server.js)
+  "main": "server.js",
   "scripts": {
-    "start": "node server.js"  // This will start your backend server
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
