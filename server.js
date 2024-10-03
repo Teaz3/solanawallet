@@ -78,7 +78,9 @@ app.post('/generate-wallet', async (req, res) => {
   }
 });
 
+// Use the PORT provided by Render or default to 3001 for local development
+const PORT = process.env.PORT || 3001;
 
-app.listen(3001, () => {
-  console.log('Server is running on http://localhost:3001');
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
