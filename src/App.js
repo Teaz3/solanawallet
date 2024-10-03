@@ -53,7 +53,7 @@ function App() {
     setGeneratedWallet(null);
 
     try {
-      const response = await fetch('http://localhost:3001/generate-wallet', {
+      const response = await fetch('https://solanawallet-4.onrender.com', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ customWord }),
