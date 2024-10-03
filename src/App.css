@@ -1,38 +1,178 @@
-.App {
+/* General body styling for centering */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f1f1f1;
+}
+
+/* Container for the app content */
+.app-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input-group {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.input-field {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #e0e0e0;
+  border-radius: 15px;
+  font-size: 16px;
+  margin-right: 10px;
+  outline: none;
+}
+
+.generate-button {
+  padding: 10px 15px;
+  background-color: #007aff;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.generate-button:disabled {
+  background-color: #cccccc;
+}
+
+.loading-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.wallet-container {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 2px solid #e0e0e0;
+  border-radius: 20px;
+}
+
+.wallet-header {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.wallet-info {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 15px;
+  word-break: break-all;
+}
+
+.purchase-button {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.purchase-button:disabled {
+  background-color: #cccccc;
+}
+
+.copy-button,
+.import-button {
+  background-color: #007aff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 10px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.copy-button:hover,
+.import-button:hover {
+  background-color: #005bb5;
+}
+
+.copy-button svg,
+.import-button svg {
+  font-size: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .app-container {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .input-group {
+    flex-direction: column;
+  }
+
+  .input-field {
+    width: 100%;
+    margin: 0 0 10px 0;
+  }
+
+  .generate-button {
+    width: 100%;
+  }
+
+  .purchase-button {
+    width: 100%;
+  }
+}
+.confirmation-dialog {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #ffcc00;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.confirm-button, .cancel-button {
+  margin: 10px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.confirm-button {
+  background-color: #28a745;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cancel-button {
+  background-color: #dc3545;
+  color: white;
 }
