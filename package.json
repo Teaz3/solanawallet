@@ -1,9 +1,9 @@
 {
   "name": "wallet-backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",  // Ensure this points to your main server file (likely server.js)
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"  // This will start your backend server
   },
   "keywords": [],
   "author": "",
